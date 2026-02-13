@@ -4,28 +4,44 @@
     <title>Shadow Destiny - Minecraft Server</title>
     <meta charset="UTF-8">
     <meta name="description" content="Shadow Destiny - Servidor Minecraft Survival con eventos, economía y PvP.">
-    <meta name="keywords" content="Minecraft, Shadow Destiny, Survival, PvP, Server">
-    <meta name="author" content="Shadow Destiny">
 
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: linear-gradient(to bottom, #0f0f0f, #1a1a1a);
             color: white;
             text-align: center;
+            overflow-x: hidden;
+        }
+
+        /* 🔥 Fondo animado */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 20% 20%, purple, transparent 40%),
+                        radial-gradient(circle at 80% 30%, #0ff, transparent 40%),
+                        radial-gradient(circle at 50% 80%, #ff00ff, transparent 40%);
+            animation: moveBackground 15s infinite linear;
+            z-index: -1;
+        }
+
+        @keyframes moveBackground {
+            0% { transform: translate(0,0); }
+            50% { transform: translate(-25%, -25%); }
+            100% { transform: translate(0,0); }
         }
 
         header {
-            padding: 80px 20px;
-            background: url('https://images.unsplash.com/photo-1612831661493-02f8a6c2a444') no-repeat center center;
-            background-size: cover;
+            padding: 100px 20px;
         }
 
         header h1 {
-            font-size: 60px;
-            margin: 0;
-            text-shadow: 0 0 20px purple;
+            font-size: 70px;
+            text-shadow: 0 0 25px purple;
         }
 
         .section {
@@ -33,12 +49,12 @@
         }
 
         .box {
-            background: #222;
+            background: rgba(0,0,0,0.7);
             margin: 20px auto;
-            padding: 20px;
+            padding: 25px;
             width: 80%;
             border-radius: 15px;
-            box-shadow: 0 0 15px purple;
+            box-shadow: 0 0 20px purple;
         }
 
         .btn {
@@ -51,15 +67,25 @@
             border-radius: 10px;
             margin-top: 20px;
             transition: 0.3s;
+            cursor: pointer;
         }
 
         .btn:hover {
             background: #a020f0;
+            transform: scale(1.05);
+        }
+
+        .discord-btn {
+            background: #5865F2;
+        }
+
+        .discord-btn:hover {
+            background: #4752c4;
         }
 
         footer {
             padding: 20px;
-            background: black;
+            background: rgba(0,0,0,0.8);
             font-size: 14px;
         }
     </style>
@@ -73,6 +99,7 @@
 </header>
 
 <div class="section">
+
     <div class="box">
         <h2>🛡 Modalidad</h2>
         <p>Survival | Economía | PvP | Eventos especiales</p>
@@ -86,10 +113,18 @@
     <div class="box">
         <h2>🎮 IP del Servidor</h2>
         <p><b>shadowdestinytemp2.holy.gg</b></p>
+
         <button class="btn" onclick="navigator.clipboard.writeText('shadowdestinytemp2.holy.gg')">
             Copiar IP
         </button>
+
+        <br><br>
+
+        <a href="https://discord.gg/HMTQk3vg" target="_blank" class="btn discord-btn">
+            Unirse al Discord
+        </a>
     </div>
+
 </div>
 
 <footer>
