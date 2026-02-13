@@ -12,58 +12,33 @@
             color: white;
             text-align: center;
             overflow-x: hidden;
-            background: black;
+            background: url('imagen.png') no-repeat center center fixed;
+            background-size: cover;
         }
 
-        .stars {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            z-index: -2;
-        }
-
-        .stars span {
-            position: absolute;
-            width: 2px;
-            height: 2px;
-            background: white;
-            animation: moveStars linear infinite;
-        }
-
-        @keyframes moveStars {
-            from { transform: translateY(0); }
-            to { transform: translateY(100vh); }
-        }
-
+        /* Oscurecer imagen para que el texto se vea bien */
         body::before {
             content: "";
             position: fixed;
-            width: 200%;
-            height: 200%;
-            background:
-                radial-gradient(circle at 20% 30%, #00bfff, transparent 40%),
-                radial-gradient(circle at 70% 20%, #8b0000, transparent 40%);
-            animation: moveBg 20s infinite linear;
-            z-index: -3;
-        }
-
-        @keyframes moveBg {
-            0% { transform: translate(0,0); }
-            50% { transform: translate(-20%, -20%); }
-            100% { transform: translate(0,0); }
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            z-index: -1;
         }
 
         header {
-            padding: 100px 20px;
+            padding: 120px 20px 60px 20px;
         }
 
         header h1 {
             font-size: 70px;
-            text-shadow: 0 0 25px #00bfff;
+            text-shadow: 0 0 25px red;
         }
 
         .section {
-            padding: 60px 20px;
+            padding: 40px 20px;
         }
 
         .box {
@@ -72,13 +47,13 @@
             padding: 30px;
             width: 85%;
             border-radius: 15px;
-            box-shadow: 0 0 20px #8b0000;
+            box-shadow: 0 0 20px darkred;
         }
 
         .btn {
             display: inline-block;
             padding: 15px 30px;
-            background: #8b0000;
+            background: darkred;
             color: white;
             text-decoration: none;
             font-weight: bold;
@@ -94,35 +69,26 @@
         }
 
         .discord-btn {
-            background: #00bfff;
-            color: black;
+            background: #5865F2;
         }
 
         .discord-btn:hover {
-            background: #009acd;
+            background: #4752c4;
         }
 
         .owners {
             margin-top: 40px;
             display: inline-block;
             padding: 15px 25px;
-            background: #00bfff;
-            color: black;
+            background: crimson;
             border-radius: 20px;
             font-weight: bold;
-            animation: float 3s ease-in-out infinite;
-            box-shadow: 0 0 15px #00bfff;
-        }
-
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
+            box-shadow: 0 0 15px red;
         }
 
         footer {
             padding: 20px;
-            background: rgba(0,0,0,0.8);
+            background: rgba(0,0,0,0.9);
             font-size: 14px;
         }
     </style>
@@ -130,26 +96,13 @@
 
 <body>
 
-<div class="stars">
-<script>
-for(let i=0;i<150;i++){
-    let star=document.createElement("span");
-    star.style.left=Math.random()*100+"%";
-    star.style.top=Math.random()*100+"%";
-    star.style.animationDuration=(5+Math.random()*10)+"s";
-    document.querySelector(".stars").appendChild(star);
-}
-</script>
-</div>
-
 <header>
     <h1>Shadow Destiny</h1>
-    <p>El destino se forja entre el cielo y la sangre...</p>
+    <p>El destino se forja en la oscuridad...</p>
 </header>
 
 <div class="section">
 
-    <!-- 📜 Segunda Temporada -->
     <div class="box">
         <h2>📜 Segunda Temporada</h2>
         <p>
@@ -160,23 +113,20 @@ for(let i=0;i<150;i++){
         Más estabilidad, más eventos y mejor experiencia.
         <br><br>
         Ven y únete. Ayúdanos a crecer…  
-        y tal vez a que Star recupere la inversión 🔥🔥🔥
+        y tal vez a que Star recupere la inversión 🔥🔥🔥 (Chubi waton)
         </p>
     </div>
 
-    <!-- 🛡 Modalidad -->
     <div class="box">
         <h2>🛡 Modalidad</h2>
         <p>Survival | Economía | PvP | Eventos especiales</p>
     </div>
 
-    <!-- 🌍 Versión -->
     <div class="box">
         <h2>🌍 Versión</h2>
         <p>1.20.1+ | Java Edition</p>
     </div>
 
-    <!-- 🎮 IP -->
     <div class="box">
         <h2>🎮 IP del Servidor</h2>
         <p><b>shadowdestinytemp2.holy.gg</b></p>
