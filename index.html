@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Shadow Destiny - Minecraft Server</title>
-    <meta charset="UTF-8">
-    <meta name="description" content="Shadow Destiny - Servidor Minecraft Survival con eventos, economía y PvP.">
+<title>Shadow Destiny - Minecraft Server</title>
+<meta charset="UTF-8">
+<meta name="description" content="Shadow Destiny - Servidor Minecraft Survival con eventos, economía y PvP.">
 
 <style>
 body {
@@ -19,11 +19,9 @@ body {
 body::before {
     content: "";
     position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.7);
+    background: rgba(0,0,0,0.75);
     z-index: -1;
 }
 
@@ -41,7 +39,7 @@ header h1 {
 }
 
 .box {
-    background: rgba(0,0,0,0.85);
+    background: rgba(0,0,0,0.9);
     margin: 25px auto;
     padding: 30px;
     width: 85%;
@@ -96,7 +94,7 @@ footer {
 
 #tienda {
     padding: 60px 20px;
-    background: rgba(0,0,0,0.9);
+    background: rgba(0,0,0,0.95);
 }
 
 .titulo-seccion {
@@ -107,10 +105,11 @@ footer {
 }
 
 .descuento {
-    font-size: 20px;
+    font-size: 22px;
     color: gold;
     margin-bottom: 40px;
     animation: parpadeo 1.5s infinite alternate;
+    font-weight: bold;
 }
 
 @keyframes parpadeo {
@@ -148,8 +147,12 @@ footer {
 }
 
 .kit-card h3 {
-    margin-bottom: 15px;
-    color: white;
+    margin-bottom: 10px;
+}
+
+.kit-card p {
+    font-size: 14px;
+    margin: 5px 0;
 }
 
 .shadow-kit {
@@ -162,13 +165,19 @@ footer {
     to { box-shadow: 0 0 35px crimson; }
 }
 
+.precio {
+    font-size: 18px;
+    color: #00bfff;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
 .tienda-info {
     margin-top: 40px;
-    font-size: 18px;
+    font-size: 20px;
     color: #ff4d4d;
     font-weight: bold;
 }
-
 </style>
 </head>
 
@@ -181,92 +190,119 @@ footer {
 
 <div class="section">
 
-    <div class="box">
-        <h2>📜 Segunda Temporada</h2>
-        <p>
-        ¿Vuelves para conquistar la Segunda Temporada de Shadow Destiny  
-        o simplemente tuviste miedo de sobrevivir la primera parte y huiste...?  
-        <br><br>
-        El servidor mejoró después de la primera temporada.  
-        Más estabilidad, más eventos y mejor experiencia.
-        <br><br>
-        Ven y únete. Ayúdanos a crecer…  
-        y tal vez a que Star recupere la inversión 🔥🔥🔥
-        </p>
-    </div>
+<div class="box">
+<h2>📜 Segunda Temporada</h2>
+<p>
+¿Vuelves para conquistar la Segunda Temporada de Shadow Destiny  
+o simplemente tuviste miedo de sobrevivir la primera parte y huiste...?  
+<br><br>
+El servidor mejoró después de la primera temporada.  
+Más estabilidad, más eventos y mejor experiencia.  
+<br><br>
+Ven y únete. Ayúdanos a crecer…  
+y tal vez a que Star recupere la inversión 🔥🔥🔥
+</p>
+</div>
 
-    <div class="box">
-        <h2>🛡 Modalidad</h2>
-        <p>Survival | Economía | PvP | Eventos especiales</p>
-    </div>
+<div class="box">
+<h2>🛡 Modalidad</h2>
+<p>Survival | Economía | PvP | Eventos especiales</p>
+</div>
 
-    <div class="box">
-        <h2>🌍 Versión</h2>
-        <p>1.20.1+ | Java Edition</p>
-    </div>
+<div class="box">
+<h2>🌍 Versión</h2>
+<p>1.20.1+ | Java Edition</p>
+</div>
 
-    <div class="box">
-        <h2>🎮 IP del Servidor</h2>
-        <p><b>shadowdestinytemp2.holy.gg</b></p>
-        <button class="btn" onclick="navigator.clipboard.writeText('shadowdestinytemp2.holy.gg')">
-            Copiar IP
-        </button>
-        <br><br>
-        <a href="https://discord.gg/HMTQk3vg" target="_blank" class="btn discord-btn">
-            Unirse al Discord
-        </a>
-        <br><br>
-        <div class="owners">
-            Nuestros owners y fundadores: BlueEyes y StarReign
-        </div>
-    </div>
+<div class="box">
+<h2>🎮 IP del Servidor</h2>
+<p><b>shadowdestinytemp2.holy.gg</b></p>
+<button class="btn" onclick="navigator.clipboard.writeText('shadowdestinytemp2.holy.gg')">
+Copiar IP
+</button>
+<br><br>
+<a href="https://discord.gg/HMTQk3vg" target="_blank" class="btn discord-btn">
+Unirse al Discord
+</a>
+<br><br>
+<div class="owners">
+Nuestros owners y fundadores: BlueEyes y StarReign
+</div>
+</div>
 
 </div>
 
 <section id="tienda">
-    <h2 class="titulo-seccion">🛒 TIENDA OFICIAL</h2>
+<h2 class="titulo-seccion">🛒 TIENDA OFICIAL</h2>
 
-    <div class="descuento">
-        🎉 ¡Descuento especial por apertura del servidor! 🎉
-    </div>
+<div class="descuento">
+🎉 ¡Descuento especial por apertura del servidor! 🎉
+</div>
 
-    <div class="kits-container">
+<div class="kits-container">
 
-        <div class="kit-card" onclick="window.open('https://discord.gg/HMTQk3vg','_blank')">
-            <img src="Survivor.png">
-            <h3>Survivor - $1.99</h3>
-        </div>
+<div class="kit-card" onclick="window.open('https://discord.gg/HMTQk3vg','_blank')">
+<img src="Survivor.png">
+<h3>Survivor</h3>
+<p>✔ Armadura de hierro completa</p>
+<p>✔ Espada encantada</p>
+<p>✔ Herramientas básicas</p>
+<p>✔ 16 manzanas doradas</p>
+<div class="precio">$1.99</div>
+</div>
 
-        <div class="kit-card" onclick="window.open('https://discord.gg/HMTQk3vg','_blank')">
-            <img src="Raider.png">
-            <h3>Raider - $2.99</h3>
-        </div>
+<div class="kit-card" onclick="window.open('https://discord.gg/HMTQk3vg','_blank')">
+<img src="Raider.png">
+<h3>Raider</h3>
+<p>✔ Armadura de diamante</p>
+<p>✔ Espada Sharpness III</p>
+<p>✔ Arco Power II</p>
+<p>✔ 32 manzanas doradas</p>
+<div class="precio">$2.99</div>
+</div>
 
-        <div class="kit-card" onclick="window.open('https://discord.gg/HMTQk3vg','_blank')">
-            <img src="Ultra.png">
-            <h3>Ultra - $4.99</h3>
-        </div>
+<div class="kit-card" onclick="window.open('https://discord.gg/HMTQk3vg','_blank')">
+<img src="Ultra.png">
+<h3>Ultra</h3>
+<p>✔ Armadura Prot IV</p>
+<p>✔ Espada Sharpness IV</p>
+<p>✔ Totem de inmortalidad</p>
+<p>✔ 48 manzanas doradas</p>
+<div class="precio">$4.99</div>
+</div>
 
-        <div class="kit-card" onclick="window.open('https://discord.gg/HMTQk3vg','_blank')">
-            <img src="Omega.png">
-            <h3>Omega - $7.99</h3>
-        </div>
+<div class="kit-card" onclick="window.open('https://discord.gg/HMTQk3vg','_blank')">
+<img src="Omega.png">
+<h3>Omega</h3>
+<p>✔ Armadura Netherite</p>
+<p>✔ Espada Sharpness V</p>
+<p>✔ Elytra</p>
+<p>✔ 64 manzanas doradas</p>
+<div class="precio">$7.99</div>
+</div>
 
-        <div class="kit-card shadow-kit" onclick="window.open('https://discord.gg/HMTQk3vg','_blank')">
-            <img src="Shadow.png">
-            <h3>Shadow - $10.99</h3>
-        </div>
+<div class="kit-card shadow-kit" onclick="window.open('https://discord.gg/HMTQk3vg','_blank')">
+<img src="Shadow.png">
+<h3>Shadow</h3>
+<p>✔ Netherite Prot IV</p>
+<p>✔ Sharpness V + Fire Aspect</p>
+<p>✔ Elytra + Cohetes</p>
+<p>✔ 2 Totems</p>
+<p>✔ 64 manzanas doradas</p>
+<div class="precio">$10.99</div>
+</div>
 
-    </div>
+</div>
 
-    <div class="tienda-info">
-        Todos los Kits se compran exclusivamente en el Discord oficial de Shadow Destiny.
-    </div>
+<div class="tienda-info">
+⚠ TODOS los Kits se compran exclusivamente en el Discord oficial.  
+DEBEN ABRIR TICKET para realizar la compra.
+</div>
 
 </section>
 
 <footer>
-    © 2026 Shadow Destiny - Todos los derechos reservados
+© 2026 Shadow Destiny - Todos los derechos reservados
 </footer>
 
 </body>
