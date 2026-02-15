@@ -16,7 +16,6 @@
             background-size: cover;
         }
 
-        /* Oscurecer imagen para que el texto se vea bien */
         body::before {
             content: "";
             position: fixed;
@@ -61,6 +60,7 @@
             margin-top: 20px;
             transition: 0.3s;
             cursor: pointer;
+            border: none;
         }
 
         .btn:hover {
@@ -91,6 +91,66 @@
             background: rgba(0,0,0,0.9);
             font-size: 14px;
         }
+
+        /* ===== TIENDA ===== */
+
+        #tienda {
+            padding: 60px 20px;
+            background: rgba(0,0,0,0.9);
+        }
+
+        .titulo-seccion {
+            font-size: 45px;
+            color: red;
+            margin-bottom: 50px;
+            text-shadow: 0 0 20px darkred;
+        }
+
+        .kits-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            width: 90%;
+            margin: auto;
+        }
+
+        .kit-card {
+            background: rgba(20,20,20,0.95);
+            padding: 20px;
+            border-radius: 15px;
+            border: 1px solid darkred;
+            transition: 0.3s;
+            box-shadow: 0 0 15px black;
+        }
+
+        .kit-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px red;
+        }
+
+        .kit-card img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .kit-card h3 {
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .kit-card ul {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+            color: #ccc;
+            font-size: 14px;
+        }
+
+        .kit-card ul li {
+            margin-bottom: 6px;
+        }
+
     </style>
 </head>
 
@@ -113,7 +173,7 @@
         Más estabilidad, más eventos y mejor experiencia.
         <br><br>
         Ven y únete. Ayúdanos a crecer…  
-        y tal vez a que Star recupere la inversión 🔥🔥🔥 (Chubi waton)
+        y tal vez a que Star recupere la inversión 🔥🔥🔥
         </p>
     </div>
 
@@ -149,6 +209,77 @@
     </div>
 
 </div>
+
+<!-- ===== TIENDA ===== -->
+
+<section id="tienda">
+    <h2 class="titulo-seccion">🛒 TIENDA OFICIAL</h2>
+
+    <div class="kits-container">
+
+        <div class="kit-card">
+            <img src="Survivor.png">
+            <h3>Survivor - $1.99</h3>
+            <ul>
+                <li>Espada hierro Filo I</li>
+                <li>Herramientas hierro Eficiencia I</li>
+                <li>Armadura mallas Protección II</li>
+                <li>16 Filetes</li>
+                <li>3 Manzanas doradas</li>
+                <li>Tag exclusivo</li>
+            </ul>
+        </div>
+
+        <div class="kit-card">
+            <img src="Raider.png">
+            <h3>Raider - $2.99</h3>
+            <ul>
+                <li>Set hierro Filo II</li>
+                <li>Protección II</li>
+                <li>32 Filetes</li>
+                <li>5 Manzanas doradas</li>
+                <li>2 Homes</li>
+            </ul>
+        </div>
+
+        <div class="kit-card">
+            <img src="Ultra.png">
+            <h3>Ultra - $4.99</h3>
+            <ul>
+                <li>Set diamante Filo III</li>
+                <li>Fortuna III</li>
+                <li>32 Zanahorias doradas</li>
+                <li>10 Manzanas doradas</li>
+                <li>2 Stacks XP</li>
+                <li>1 Totem</li>
+            </ul>
+        </div>
+
+        <div class="kit-card">
+            <img src="Omega.png">
+            <h3>Omega - $7.99</h3>
+            <ul>
+                <li>Set diamante Filo IV</li>
+                <li>Eficiencia V</li>
+                <li>Fortuna IV</li>
+                <li>3 Stacks XP</li>
+                <li>5 Manzanas encantadas</li>
+                <li>4 Totems</li>
+            </ul>
+        </div>
+
+        <div class="kit-card">
+            <img src="Shadow.png">
+            <h3>Shadow - Próximamente</h3>
+            <ul>
+                <li>Kit máximo nivel</li>
+                <li>Beneficios exclusivos</li>
+                <li>Ventajas únicas del servidor</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
 
 <footer>
     © 2026 Shadow Destiny - Todos los derechos reservados
